@@ -42,6 +42,7 @@ const VehicleSchema = new mongoose.Schema({
         enum: ['car', 'bike', 'truck', 'bus', 'van', 'auto'],
         required: true
     },
+    
     insurance:{
         policyNumber: { type: String, default: null },
         provider: { type: String, default: null },
