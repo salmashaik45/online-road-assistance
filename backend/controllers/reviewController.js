@@ -1,4 +1,4 @@
-const Review = require('../models/Review');
+const Review = require('../models/Reviews');
 const ServiceProvider = require('../models/ServiceProvider');
 const ServiceRequest = require('../models/ServiceRequest');
 const Notification = require('../models/Notification');
