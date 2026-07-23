@@ -60,7 +60,7 @@ const serviceRequestSchema = new mongoose.Schema({
     paymentStatus: {
         type: String,
         enum: ['pending', 'paid', 'failed', 'refunded'],
-        default: pending
+        default: 'pending'
     },
     paymentMethod: {
         type: String,
@@ -83,4 +83,4 @@ const serviceRequestSchema = new mongoose.Schema({
     providerNotes: {type: String, default: null},
 }, {timestamps: true});
 
-module.exports = mongoose.model('ServiceRequest', ServiceRequestSchema);
+module.exports = mongoose.model('ServiceRequest', serviceRequestSchema);
