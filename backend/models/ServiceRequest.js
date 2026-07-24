@@ -12,7 +12,7 @@ const serviceRequestSchema = new mongoose.Schema({
     },
     vehicleId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'vehicle',
+        ref: 'Vehicle',
         required: true
     },
     serviceType: {
