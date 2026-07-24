@@ -30,7 +30,7 @@ router.post('/', protect, createReview);
 router.get('/my-reviews', protect, getMyReviews);
 
 // Get all reviews for a specific provider
-router.get('/providers/:id', getProviderReviews);
+router.get('/provider/:id', getProviderReviews);
 
 // Provider replies to a review
 router.put('/:id/reply', protect, replyToReview);
