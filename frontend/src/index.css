@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Light Mode Theme Palette */
+  --color-primary: #FF6B35; /* Orange */
+  --color-secondary: #1A1A2E; /* Dark Navy */
+  --color-background: #F5F5F5; /* Light Gray */
+  --color-on-background: #1A1A2E;
+  
+  --color-surface: #ffffff; 
+  --color-on-surface: #1A1A2E;
+  --color-surface-variant: #f4f4f5;
+  --color-on-surface-variant: #52525b;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f8f8;
+  --color-surface-container: #f4f4f5;
+  --color-surface-container-high: #e4e4e7;
+  --color-surface-container-highest: #d4d4d8;
+  
+  --color-outline: #a1a1aa;
+  --color-outline-variant: #d4d4d8;
+  
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-primary-fixed: #ffbba1;
+  --color-on-primary-fixed: #4a1c0b;
+  --color-secondary-fixed: #b3b3d9;
+  --color-on-secondary-fixed: #070710;
+  --color-primary-fixed-dim: #ff916a;
+  
+  --color-error: #F44336; /* Danger */
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+  
+  --color-success: #4CAF50;
+  --color-on-success: #ffffff;
+  
+  --color-warning: #FFC107;
+  --color-on-warning: #000000;
+
+  --color-tertiary: #06b6d4; /* Cyan */
+  --color-on-tertiary: #ffffff;
+  
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --spacing-gutter: 16px;
+  --spacing-container-padding: 24px;
+  --spacing-touch-target-min: 48px;
+  --spacing-base: 8px;
+  --spacing-stack-gap-lg: 32px;
+  --spacing-stack-gap-md: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
