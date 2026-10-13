@@ -1,6 +1,6 @@
-import { createContext, useContext, useMemo, useState } from 'react';
 
-const AuthContext = createContext(null);
+import { useMemo, useState } from 'react';
+import AuthContext from './auth-context';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
@@ -15,6 +15,7 @@ export function AuthProvider({ children }) {
   const login = (userData) => {
     setUser(userData);
     localStorage.setItem('roadassist_user', JSON.stringify(userData));
+
     if (userData?.token) {
       localStorage.setItem('roadassist_token', userData.token);
     }
@@ -27,17 +28,18 @@ export function AuthProvider({ children }) {
   };
 
   const value = useMemo(
-    () => ({ user, login, logout, isAuthenticated: Boolean(user?.token) }),
+    () => ({
+      user,
+      login,
+      logout,
+      isAuthenticated: Boolean(user?.token),
+    }),
     [user]
   );
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
 }

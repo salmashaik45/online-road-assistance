@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Home, LayoutDashboard, Car, ReceiptText,
+  LayoutDashboard, Car, ReceiptText,
   Truck, Settings, Bell, Shield, Trash2
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 
 function ProfilePage() {
   const { user, login, logout } = useAuth();

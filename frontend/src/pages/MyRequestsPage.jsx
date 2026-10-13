@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Home, LayoutDashboard, Car, ReceiptText,
+  LayoutDashboard, Car, ReceiptText,
   Truck, Settings, Wrench, Star
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 
 const STATUS_FILTERS = ['all', 'pending', 'accepted', 'ongoing', 'completed', 'cancelled'];
 

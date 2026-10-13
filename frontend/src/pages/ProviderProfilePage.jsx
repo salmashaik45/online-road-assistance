@@ -1,16 +1,15 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, DollarSign, History,
-  UserCircle, Settings, Shield, Trash2, CheckCircle2
+  UserCircle, Shield, CheckCircle2
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 
 function ProviderProfilePage() {
   const { user, login, logout } = useAuth();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [formData, setFormData] = useState({

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Car, Plus, Trash2, Pencil, Home, LayoutDashboard, ReceiptText, Truck, Settings, X } from 'lucide-react';
+import { Car, Plus, Trash2, Pencil, LayoutDashboard, ReceiptText, Truck, Settings, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 
 const FUEL_TYPES = ['petrol', 'diesel', 'electric', 'cng', 'hybrid'];
 const VEHICLE_TYPES = ['car', 'bike', 'truck', 'bus', 'auto', 'van'];
